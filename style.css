@@ -1,0 +1,153 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+.main-title {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main-body {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    color: #3c3c3c;
+    justify-content: center;
+}
+
+.col {
+    background: #3c3c3c;
+    border-radius: 20px;
+    width: 400px;
+    padding: 8px;
+    text-align: center;
+}
+
+.todo {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.doing {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.done {
+    background: rgb(0, 128, 0, 0.5);
+}
+
+.todo::before {
+    content: "To Do";
+    font-size: 1.5rem;
+    background: white;
+    color: black;
+    padding: 0px 16px;
+    border-radius: 64px;
+}
+
+.doing::before {
+    content: "Doing";
+    font-size: 1.5rem;
+    background: white;
+    color: black;
+    padding: 0px 16px;
+    border-radius: 64px;
+}
+
+.done::before {
+    content: "Done";
+    font-size: 1.5rem;
+    background: white;
+    color: black;
+    padding: 0px 16px;
+    border-radius: 64px;
+}
+
+.task {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card {
+    background: rgb(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-top: 8px;
+    padding: 1px 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 8px 0;
+}
+
+button {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.doing-button {
+    background: rgb(255, 255, 0, 0.5);
+    border: 1px solid rgb(255, 255, 0, 0.5);
+    color: black;
+}
+
+.doing-button:hover {
+    background: rgba(144, 144, 0, 0.8);
+    border: 1px solid rgba(144, 144, 0, 0.8);
+}
+
+.done-button {
+    background: rgb(0, 128, 0, 0.5);
+    border: 1px solid rgb(0, 128, 0, 0.5);
+    color: black;
+}
+
+.done-button:hover {
+    background: rgb(0, 128, 0, 0.8);
+    border: 1px solid rgb(0, 128, 0, 0.8);
+}
+
+.delete-button {
+    background: rgb(255, 0, 0, 0.5);
+    border: 1px solid rgb(255, 0, 0, 0.5);
+    color: black;
+}
+
+.delete-button:hover {
+    background: rgb(255, 0, 0, 0.8);
+    border: 1px solid rgb(255, 0, 0, 0.8);
+}
+
+
+button:hover {
+    background: #3c3c3c;
+    color: #f5f5f5;
+}
+
+/* for smaller devices */
+@media screen and (max-width: 800px) {
+    .main-body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col {
+        width: 80%;
+    }
+}
