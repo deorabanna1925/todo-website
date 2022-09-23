@@ -26,6 +26,7 @@ function addTask() {
   var doingButton = document.createElement("button");
   doingButton.classList.add("doing-button");
   doingButton.textContent = "Doing";
+  doingButton.title = "Move to Doing";
   doingButton.addEventListener("click", () => {
     if (confirm("Are you sure?")) {
       doing.appendChild(card);
@@ -36,6 +37,7 @@ function addTask() {
   var doneButton = document.createElement("button");
   doneButton.classList.add("done-button");
   doneButton.textContent = "Done";
+  doneButton.title = "Move to Done";
   doneButton.addEventListener("click", () => {
     if (confirm("Are you sure?")) {
     done.appendChild(card);
@@ -47,6 +49,7 @@ function addTask() {
   var deleteButton = document.createElement("button");
   deleteButton.classList.add("delete-button");
   deleteButton.textContent = "Delete";
+  deleteButton.title = "Delete";
   deleteButton.addEventListener("click", () => {
     if (confirm("Are you sure?")) {
     card.remove();
