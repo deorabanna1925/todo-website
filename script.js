@@ -77,15 +77,11 @@ function loadState() {
   done.innerHTML = localStorage.getItem("done");
 }
 
-// save state every 5 seconds
-setInterval(() => {
-  saveState();
-});
-
 // check if state has been saved
 setInterval(() => {
   if (savedState === false) {
     savedState = true;
+    saveState();
     console.log("saved");
   }
 }, 5000);
