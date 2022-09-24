@@ -11,7 +11,6 @@ loadState();
 function addTask() {
   const task = prompt("Enter a task");
   if (task === null) return;
-  // create a task card and add it to the todo column with time stamp
   const card = document.createElement("div");
   card.classList.add("card");
   var taskText = document.createElement("p");
@@ -63,21 +62,18 @@ function addTask() {
   todo.appendChild(card);
 }
 
-// save state to local storage
 function saveState() {
   localStorage.setItem("todo", todo.innerHTML);
   localStorage.setItem("doing", doing.innerHTML);
   localStorage.setItem("done", done.innerHTML);
 }
 
-// load state from local storage
 function loadState() {
   todo.innerHTML = localStorage.getItem("todo");
   doing.innerHTML = localStorage.getItem("doing");
   done.innerHTML = localStorage.getItem("done");
 }
 
-// check if state has been saved
 setInterval(() => {
   if (savedState === false) {
     savedState = true;
